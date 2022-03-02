@@ -1,0 +1,93 @@
+#product_view_form {
+    .section {
+        &-header {
+            display: flex;
+            flex-direction: row;
+            margin: 0 0 20px 0;
+            padding-top: 10px;
+            border-bottom: 1px solid $secondary_color;
+            justify-content: space-between;
+            .header {
+                &-title {
+                    max-width: 50%;
+                    h1 {
+                        color: $dark_color;
+                    }
+                }
+                &-links {
+                    max-width: 50%;
+                    display: flex;
+                    gap: 5px;
+                    justify-content: center;
+                    align-items: center;
+                    white-space: nowrap;
+                }
+            }
+        }
+        &-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: space-around;
+            gap: 20px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            .product-card {
+                position: relative;
+                border: 1px solid $dark_color;
+                border-radius: 2px;
+                padding: 20px;
+                // box-shadow: 0px 0px 3px;
+                transition: background 1s;
+                input.delete-checkbox {
+                    position: absolute;
+                    left: 20px;
+                    top: 20px;
+                    z-index: 10;
+                }
+                a {
+                    text-decoration: none;
+                    .product {
+                        &-id {
+                            h3 {
+                                font-size: 14px;
+                                color: $dark_color;
+                            }
+                        }
+                        &-name {
+                            h2 {
+                                font-size: 24px;
+                                color: $dark_color;
+                            }
+                        }
+                        &-price {
+                            h3 {
+                                color: $danger_color;
+                                font-size: 18px;
+                            }
+                        }
+                        &-atrr {
+                            span {
+                                color: $secondary_color;
+                                &:first-child {
+                                    font-weight: 600;
+                                }
+                            }
+    
+                        }
+                    }
+                   
+                }
+                &:hover {
+                    box-shadow: 0px 0px 2px;    
+                    background: $dark_color;
+                    h2, h3, a, span {
+                        color: #fff !important;
+                    }
+                    
+                }
+
+            }
+        }
+    }
+}

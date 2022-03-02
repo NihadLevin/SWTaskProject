@@ -1,0 +1,32 @@
+@media  only screen and (max-width: 991px) {
+    #form-head {
+        div {
+            text-align: center !important;
+        }         
+    }
+    #product_view_form {
+        .section {
+            &-header {
+                flex-direction: column;
+                padding-bottom: 10px;
+                align-items: center;
+                &-links {
+                    width: 100%;
+                }
+            }
+            &-products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media  only screen and (max-width: 550px) {
+    #product_view_form {
+        .section {
+            &-products {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
